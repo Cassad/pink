@@ -1,0 +1,277 @@
+
+
+  
+.main-header 
+  min-height: 733px
+  background-image: url("../../img/bg/bg-header-phone-mobile.png"), url("../../img/bg/bg-header-wrist-mobile.png"), url("../../img/bg/bg-header-mobile.png")
+  background-repeat: no-repeat
+  background-position: 104px 209px, -167px 176px,0 0
+
+.navigation
+  transition: margin-top 1s ease
+  .navigation__top-line
+    padding: 0 20px
+    min-height: 66px
+    display: flex           
+    justify-content: space-between 
+    align-items: center
+    min-height: 66px 
+    background-color: rgba($secondary, 0.7)
+    transition: transform 1s ease
+  .menu
+    display: flex
+    flex-direction: column
+    list-style: none 
+    padding: 0
+    margin: 0  
+    transition: transform 1s ease
+    &__item
+      border-top: 1px solid #485461
+      border-bottom: 1px solid #000
+    .menu__link
+      display: block
+      font-size: 18px
+      line-height: 32px
+      color: #fff
+      text-decoration: none
+      text-transform: uppercase
+      background-color: $secondary
+      text-align: center
+      padding: 10px 20px
+      transition: color 0.3s ease
+      &[href]:focus,
+      &[href]:hover
+        color: $accent
+        text-decoration: none
+      &[href]:active
+        color: rgba($accent, 0.3)
+
+  .menu-toggle
+    position: relative
+    z-index: 10 
+    &:hover>.menu-toggle__line,
+    &:hover>.menu-toggle__line::before, 
+    &:hover>.menu-toggle__line::after
+      background-color: $accent
+    &:active>.menu-toggle__line,
+    &:active>.menu-toggle__line::before, 
+    &:active>.menu-toggle__line::after
+      background-color: rgba($accent, 0.3)       
+   
+ 
+.download
+  margin-top: 180px  
+  background-color: $secondary
+  color: #fff
+  padding: 28px 20px 30px 20px
+  &-btn
+    margin-bottom: 32px
+  .system
+    display: flex
+    justify-content: space-around
+    align-items: center
+    width: 100%
+    margin: 0
+    padding: 0
+    list-style: none
+    font-size: 0
+    margin-bottom: 31px
+    &__item img
+      display: block
+  &__text
+    padding: 0
+    margin: 0
+    font-size: 14px
+    line-height: 24px
+    font-family: $dfl
+    text-align: center
+
+
+@media (min-width: 320px) and (max-width: 599px) 
+  .contain
+    width: 320px
+    margin: 0 auto
+
+  .download__slogan
+    display: none
+
+@media (min-width: 320px) and (max-width: 1199px)
+  .navigation--opened
+    margin-top: 220px
+    .navigation__top-line
+      background-color: $secondary
+      transform: translateY(-220px)  
+    .menu
+      transform: translateY(-220px) 
+    .menu-toggle
+      width: 24px
+      height: 24px
+      background-color: transparent
+      border: none
+      outline: none
+      padding: 0
+      cursor: pointer
+      &__line
+        display: block
+        width: 24px
+        height: 3px
+        background-color: #fff
+        transform:  rotate(45deg)
+        &::before,
+        &::after
+          content: ''
+          display: block
+          width: 24px
+          height: 3px
+          background-color: #fff
+        &::before
+          transform: rotate(-90deg) 
+        &::after
+          transform: scale(0)
+
+  .navigation--closed
+    margin-top: 0px
+    .navigation__top-line 
+      transform: translateY(0px)
+    .menu
+      transform: translateY(-330px) 
+    .menu-toggle
+      width: 50px
+      height: 24px
+      background-color: transparent
+      border: none
+      outline: none
+      padding: 0
+      cursor: pointer    
+      &__line
+        display: block
+        width: 50px
+        height: 3px
+        background-color: #fff
+        transition: all 0.25s ease
+        transform:  rotate(0deg)
+        &::before,
+        &::after
+          content: ''
+          display: block
+          width: 50px
+          height: 3px
+          background-color: #fff
+          transition: all 0.25s ease
+        &::before
+          transform: translateY(-10px) rotate(0deg) 
+        &::after
+          transform: translateY(7px) scale(1)
+
+@media (min-width: 600px)
+
+  .contain
+    width: 600px
+    margin: 0 auto
+
+  .main-header
+    min-height: 729px 
+    background-image: url("../../img/bg/bg-header-phone-tablet.png"),
+    url("../../img/bg/bg-header-wrist-tablet.png"),
+    url("../../img/bg/bg-header-tablet.png")
+    background-position: 311px 237px, -170px bottom, 0 0
+
+
+  .navigation
+    .navigation__top-line
+      min-height: 110px 
+
+  .download
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 0 20px
+    margin: 0
+    margin-top: -140px
+    width: 50%
+    background-color: transparent
+    &-btn
+      margin-bottom: 47px
+    &__slogan
+      display: block
+      width: 70%
+      font-size: 40px
+      line-height: 50px
+      font-family: $dfl
+      font-weight: 300
+      text-align: center
+      margin-bottom: 34px
+
+
+
+@media (min-width: 1200px)
+
+  .contain
+    width: 1200px
+    margin: 0 auto
+
+  .main-header
+    min-height: 853px
+    background-image: url("../../img/bg/bg-header-phone-desktop.png"), url("../../img/bg/bg-header-wrist-desktop.png"), url("../../img/bg/bg-header-desktop.png")
+    background-position: 740px 272px, 170px bottom, -650px
+    
+
+  .navigation
+    display: flex
+    align-items: center
+    justify-content: space-around
+    background-color: rgba($secondary, 0.7)
+    min-height: 110px
+    .navigation__top-line
+      min-height: auto
+      padding: 0
+      background-color: transparent
+    .menu
+      flex-direction: row 
+      justify-content: space-around
+      width: 621px
+      &__item
+        border: none
+      .menu__link
+        background-color: transparent
+        padding: 10px 0
+      .menu__link[href]:active
+        color: rgba(255,255,255, 0.3)
+      .menu__link:not([href])
+        border-bottom: 2px solid #fff
+
+
+
+  .menu-toggle
+    display: none
+
+
+  .download
+    margin: 0
+    padding-top: 110px
+    &__slogan
+      width: 231px
+      font-size: 50px
+      line-height: 60px
+    &-btn
+      width: 300px
+      margin-bottom: 67px
+      font-size: 21px
+    .system
+      width: 205px 
+      margin-bottom: 60px 
+    &__text
+      width: 300px 
+      font-size: 18px
+      line-height: 24px
+      font-family: $dfl
+
+
+   
+
+
+
+
+
+
+   
