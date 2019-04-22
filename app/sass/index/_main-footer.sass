@@ -1,0 +1,102 @@
+.main-footer-wrapper
+  display: grid
+  grid-template-columns: 1fr
+  justify-items: center
+  padding: 20px
+  background-color: #fff
+
+.main-footer__logo
+  display: block
+  margin-bottom: 40px 
+  outline: none 
+  &:hover .footer-svg__pink,
+  &:focus .footer-svg__pink
+    fill: $accent
+  &:active .footer-svg__logo
+    opacity: 0.3
+
+.footer-svg__logo
+  width: 147px
+  height: 40px
+  transition: opacity 0.3s ease
+
+.footer-svg__glases
+  fill: $accent
+  
+.footer-svg__pink 
+  transition: fill 0.3s ease
+  fill: $secondary
+    
+  
+.social
+  margin: 0
+  padding: 0
+  list-style: none
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 18px
+  margin-bottom: 40px
+  
+.social__link
+  display: block
+  background-color: #fff
+  font-size: 0
+  text-align: center
+  border: 3px solid rgba($secondary, 0.3)
+  border-radius: 50%
+  color: $accent
+  width: 45px
+  height: 45px
+  transition: all 0.25s ease
+  &:focus,
+  &:hover
+    border-color: $secondary
+    color: $accent
+  &:active
+    border-color: rgba($secondary, 0.3)
+    opacity: 0.3
+  .fas,
+  .fab
+    font-size: 18px
+    line-height: 38px
+
+.html-academy
+  color: $secondary
+  display: inline-block
+  &:hover
+    text-decoration: none
+    color: $secondary
+
+.html-svg__logo
+  width: 27px
+  height: 34px
+  display: inline-block
+  vertical-align: middle
+  margin-left: 10px
+  fill: $accent
+  transition: all 0.3s ease
+
+.html-academy
+  &:hover .html-svg__logo,
+  &:focus .html-svg__logo
+    fill: $secondary
+  &:active .html-svg__logo
+    opacity: 0.3
+  
+@media screen and (min-width: 660px)
+  
+  .main-footer-wrapper
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: minmax(90px, auto)
+    align-items: center
+  
+  .main-footer__logo
+    margin: 0
+
+  .main-footer__social
+    margin: 0
+
+@media screen and (min-width: 1200px)
+
+  .main-footer-wrapper
+    grid-template-rows: minmax(160px, auto)

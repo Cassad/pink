@@ -2,10 +2,53 @@
 @import "vars"
 @import "libs"
 @import "base"
-@import "blocks/main-header"
+@import "index/main-header"
+@import "index/offers"
+@import "index/reviews"
+@import "index/effect"
+@import "index/price"
+@import "index/price-t"
+@import "index/adress"
+@import "index/main-footer"
+
+//___________________________________общие настройки слайдера___________________________________
+.carousel-control-prev,
+.carousel-control-next
+  display: none
+
+.carousel-caption
+  position: static
+
+.carousel-indicators
+  margin: 0
+  position: static 
+  li 
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    margin-right: 20px
+    cursor: pointer
+    background-color: rgba($dtc, 0.3)
+
+.carousel-indicators .active
+  border: 3px solid #000
+  background-color: #fff
+  height: 10px
+  height: 10px
 
 
 
+
+
+
+
+
+
+  
+//________________________________________________________________________________________________
+
+.grid
+  display: grid
 
 @import "media" // Всегда в конце
 

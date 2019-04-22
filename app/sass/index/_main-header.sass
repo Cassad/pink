@@ -7,6 +7,33 @@
   background-repeat: no-repeat
   background-position: 104px 209px, -167px 176px,0 0
 
+.header-svg__logo
+  width: 147px
+  height: 40px
+  transform: translateX(-70px) translateY(-5px)
+
+.header-svg__glases
+  display: none
+
+.header-svg__star
+  display: none
+
+.header-svg__logo
+  fill: #ffffff
+  transition: fill 0.3s ease
+
+.header__logo  
+  width: 90px
+  &:hover .header-svg__logo,
+  &:focus .header-svg__logo
+    fill: $accent
+  &:active .header-svg__logo
+    fill: rgba(255,255,255,0.3)
+    
+
+ 
+
+
 .navigation
   transition: margin-top 1s ease
   .navigation__top-line
@@ -66,6 +93,7 @@
   padding: 28px 20px 30px 20px
   &-btn
     margin-bottom: 32px
+    outline: none
   .system
     display: flex
     justify-content: space-around
@@ -87,7 +115,7 @@
     text-align: center
 
 
-@media (min-width: 320px) and (max-width: 599px) 
+@media (min-width: 320px) and (max-width: 659px) 
   .contain
     width: 320px
     margin: 0 auto
@@ -163,10 +191,10 @@
         &::after
           transform: translateY(7px) scale(1)
 
-@media (min-width: 600px)
+@media (min-width: 660px)
 
   .contain
-    width: 600px
+    width: 660px
     margin: 0 auto
 
   .main-header
@@ -174,7 +202,7 @@
     background-image: url("../../img/bg/bg-header-phone-tablet.png"),
     url("../../img/bg/bg-header-wrist-tablet.png"),
     url("../../img/bg/bg-header-tablet.png")
-    background-position: 311px 237px, -170px bottom, 0 0
+    background-position: 341px 237px, -140px bottom, 0 0
 
 
   .navigation
@@ -201,6 +229,17 @@
       font-weight: 300
       text-align: center
       margin-bottom: 34px
+
+  .header-svg__logo
+    transform: translateX(0px) translateY(0px)
+
+  .header-svg__glases
+    display: block
+  .header-svg__star
+    display: none
+
+
+
 
 
 
@@ -267,6 +306,9 @@
       font-family: $dfl
 
 
+  .header-svg__star
+    display: block
+    fill: $accent
    
 
 

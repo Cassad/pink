@@ -1,0 +1,72 @@
+.price-m
+  background-color: #fff
+  padding-top: 138px
+  padding-bottom: 40px
+  background-image: url("../../img/bg/bg_price-m_mobile.png")
+  background-position: -200px 0
+.price-m__caption
+  color: $dtc
+  list-style: none
+  padding: 0
+  margin: 0
+  display: grid
+  grid-template-columns: 3fr 1fr
+
+.price-m__tarif
+  grid-column: 1/-1
+  background-color: $secondary
+  color: #fff
+  padding: 20px 20px
+  text-transform: uppercase
+  line-height: 30px
+
+.price-m__tarif--hit
+  background-image: url("../../img/bg/bg_hit_mobile.png")
+  background-repeat: no-repeat
+  position: relative
+  &::before
+    content: 'ХИТ'
+    position: absolute
+    top: 10px
+    left: 10px
+    transform: rotate(-45deg)
+
+.price-m__title
+  font-size: 18px
+  line-height: 30px 
+  font-family: $dfb
+
+.price-m__usd
+  font-family: $dfl
+  font-size: 24px
+
+.price-m__pink-filter,
+.price-m__smile,
+.price-m__unlim,
+.price-m__comment,
+.price-m__checked,
+.price-m__unchecked
+  border: 1px solid #e5e5e5;
+  font-size: 14px
+  line-height: 30px
+  text-transform: uppercase
+  padding: 14px 0
+  background-color: #fff
+
+.price-m__checked
+  background-image: url("../../img/bg/yes.png")
+  background-repeat: no-repeat
+  background-position: center 
+
+.price-m__unchecked
+  background-image: url("../../img/bg/no.png")
+  background-repeat: no-repeat
+  background-position: center
+
+.price-m__inner
+  margin-bottom: 40px
+
+
+@media screen and (min-width: 660px)
+  .price-m
+    display: none

@@ -1,0 +1,167 @@
+.offers
+  background-color: #fff
+
+.offers-container
+  display: flex
+  justify-content: center
+  padding-top: 46px
+  
+.offers__intro
+  background-color: #fff
+  margin: 0
+  padding: 0
+  font-size: 24px
+  line-height: 28px
+  font-family: $dfl
+  font-weight: 300
+  width: 205px
+  margin-bottom: 40px
+
+.offers__question,
+.offers__slogan
+  display: block 
+  text-align: center 
+
+.offers__question
+  margin-bottom: 30px  
+
+.list-container
+  background-color: #fff 
+  padding-top: 80px
+  padding-left: 30px
+  padding-right: 30px
+  padding-bottom: 320px
+  background-image: url("../../img/bg/bg_offers_phone_mobile.png"), url("../../img/bg/bg_offers_overlay_mobile.png")
+  background-repeat: no-repeat
+  background-position: bottom center, -850px 0
+
+.offers__list
+  padding: 0
+  margin: 0
+  list-style: none
+
+.offers__item
+  margin-bottom: 45px
+
+
+.offers__name
+  display: block
+  font-family: $dfb
+  margin-bottom: 16px
+  text-align: center
+
+.offers__text
+  margin: 0
+  padding: 0
+  text-align: center
+  font-size: 14px
+
+.red
+  width: 200px
+  height: 200px
+  background-color: red
+  margin-bottom: 200px
+
+@media (min-width: 660px)
+
+  // .offers
+  //   margin-bottom: 200px
+  .offers-container
+    padding-top: 55px
+
+  .offers__intro
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-size: 40px
+    line-height: 40px
+    width: auto
+    margin-bottom: 22px
+
+  .offers__question
+    width: 585px
+    margin-bottom: 10px
+
+  .offers__slogan
+    width: 400px
+
+  .list-container
+    display: flex
+    justify-content: flex-end 
+    padding: 0
+    padding-top: 100px
+    padding-right: 20px
+    background-image: url("../../img/bg/bg_offers_screen_tablet.png"), url("../../img/bg/bg_ofers_phone_tablet.png"), url("../../img/bg/bg_offers_overlay_mobile.png")
+    background-position: 33px 117px, 20px 63px, 0 0, 700px 0 
+
+  .offers__list
+    width: 50%
+
+  .offers__name
+    text-align: left 
+    
+  .offers__text
+    text-align: left   
+
+@media (min-width: 1200px) 
+
+  .offers-container
+    padding-top: 75px 
+
+  .offers__intro
+    font-size: 50px
+    line-height: 50px
+    margin-bottom: 75px  
+
+  .offers__question
+    width: 732px
+
+  .offers__slogan
+    width: 500px
+
+  .list-container
+    background-image: url("../../img/bg/bg_overlay_desktop.png")
+    background-position: 0 0
+    padding: 0
+
+
+  .offers__list
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(3, 236px)
+    grid-gap: 90px
+    justify-content: center
+
+
+  .offers__item
+    padding-top: 335px
+    &--mood
+      background-image: url("../../img/bg/bg_offers_screen_desktop_1.png"), url("../../img/bg/bg_offers_phone_desktop.png")
+      background-repeat: no-repeat
+      background-position: 33px 45px, top center
+    &--around
+      background-image: url("../../img/bg/bg_offers_screen_desktop_2.png"), url("../../img/bg/bg_offers_phone_desktop.png")
+      background-repeat: no-repeat
+      background-position: 33px 45px, top center
+    &--friends
+      background-image: url("../../img/bg/bg_offers_screen_desktop_3.png"), url("../../img/bg/bg_offers_phone_desktop.png")
+      background-repeat: no-repeat
+      background-position: 33px 45px, top center
+    
+
+
+  .offers__name
+    font-size: 30px
+    line-height: 30px
+    text-align: center
+    background-color: #f2f2f2
+    padding-top: 40px
+
+  .offers__text
+    font-size: 18px
+    text-align: center
+    margin-bottom: 0
+
+
+
+  

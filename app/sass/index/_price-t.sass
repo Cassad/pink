@@ -1,0 +1,93 @@
+.price-t
+  display: none
+
+@media screen and (min-width: 660px)
+  .price-t
+    display: block
+    background-color: #fff
+    padding: 114px 40px 70px 40px
+    background-image: url("../../img/bg/bg_price-t_overlay_mobile.png")
+    background-position: -250px 0
+
+  .price-t__tarif
+    display: flex
+    justify-content: flex-end
+    list-style: none
+    padding: 0
+    margin: 0
+
+  .ptice-t__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: $secondary
+    color: #fff
+    width: 25%
+    line-height: 30px
+    padding-top: 10px
+    padding-bottom: 13px
+    text-transform: uppercase
+    &:not(:last-of-type)
+      border-right: 2px solid #f2f2f2
+
+  .price-t__title
+    font-size: 16px
+    font-family: $dfb
+
+  .price-t__usd
+    font-size: 18px
+    font-family: $dfl
+
+  .price-t__table
+    width: 100%
+    background-color: #fff
+    td
+      border: 1px solid #e5e5e5;
+      font-size: 14px
+      line-height: 30px
+      font-family: $dfr
+      color: $dtc
+      width: 25%
+      padding: 10px 0px 10px 15px
+    .price-t__checked,
+    .price-t__unchecked
+      font-size: 0
+      background-repeat: no-repeat
+      background-position: center
+    .price-t__checked
+      background-image: url("../../img/bg/yes.png")
+    .price-t__unchecked
+      background-image: url("../../img/bg/no.png")
+
+  .price-t__item--hit
+    position: relative
+    background-image: url("../../img/bg/bg_hit_mobile.png")
+    background-repeat: no-repeat
+    background-position: -20px 0
+    &::before
+      content: 'Хит'
+      position: absolute
+      display: block
+      text-transform: uppercase
+      font-size: 16px
+      line-height: 21px
+      left: 1px
+      top: 7px
+      transform: rotate(-45deg)
+
+  
+@media screen and (min-width: 1200px)
+
+  .price-t
+    padding: 159px 120px 98px 120px
+    background-position: 0 0
+
+  .price-t__title
+    font-size: 18px
+
+  .price-t__usd
+    font-size: 24px
+
+  .price-t__table
+    td  
+      font-size: 18px

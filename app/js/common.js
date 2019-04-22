@@ -15,4 +15,7 @@ window.onload = function(){
 		menu.classList.remove('navigation--opened');
 		
 	});
+
+
 };
+// $('.carousel').carousel();

@@ -1,0 +1,91 @@
+.reviews
+  padding: 0 20px
+  background-color: #fff
+  margin-top: -50px
+
+.reviews__item
+  min-height: 275px
+
+.reviews__cite
+  display: block
+  color: #000
+  font-style: normal
+  font-family: $dfb
+  font-size: 18px
+  line-height: 30px
+  margin-bottom: 20px
+
+.reviews__prof
+  display: none
+  color: #000
+
+.reviews__text
+  color: $dtc
+  font-size: 14px
+  line-height: 30px
+  font-family: $dfr 
+
+.reviews__caption
+  padding: 0
+  padding-top: 42px
+
+.reviews__inner
+  margin-bottom: 42px
+
+.reviews__item
+  margin-bottom: 0
+
+
+@media screen and (min-width: 660px)
+
+  .reviews
+    padding: 0 40px
+    margin-top: 0
+
+  .reviews__item
+    min-height: 270px
+
+  .reviews__cite
+    font-size: 20px
+    margin-bottom: 5px
+
+  .reviews__prof
+    font-size: 14px
+    line-height: 30px
+
+  .reviews__text
+    font-size: 18px
+    margin-bottom: 40px
+
+  .reviews__caption
+    display: flex
+    flex-direction: column
+    align-items: center
+    .reviews__cite
+      order: 2
+    .reviews__prof
+      display: block
+      order: 3
+
+@media screen and (min-width: 1200px)
+
+  .reviews
+    padding-top: 190px
+    background-image: url("../../img/bg/quotes_descktop.png.png")
+    background-repeat: no-repeat
+    background-position: center 72px
+
+  .reviews__caption
+    padding-top: 0
+
+  .reviews__cite
+    font-size: 24px
+
+  .reviews__prof
+    font-size: 18px
+
+  .reviews__text
+    max-width: 685px
+
+
+  
