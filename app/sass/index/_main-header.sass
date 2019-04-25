@@ -1,319 +1,294 @@
-
-
-  
-.main-header 
-  min-height: 733px
-  background-image: url("../../img/bg/bg-header-phone-mobile.png"), url("../../img/bg/bg-header-wrist-mobile.png"), url("../../img/bg/bg-header-mobile.png")
+.main-header
+  min-height: 730px
+  background-image: url("../../img/bg/bg-header-phone-mobile.png"), url("../../img/bg/bg-header-wrist-mobile.png"),url("../../img/bg/bg-header-mobile.png")
   background-repeat: no-repeat
-  background-position: 104px 209px, -167px 176px,0 0
+  background-position: 106px 189px, -165px 155px, center top
 
-.header-svg__logo
+.download
+  padding: 30px 20px
+  background-color: $secondary
+  margin-top: 380px
+
+
+.download-btn
+  margin-bottom: 30px
+
+
+.download__list
+  margin: 0
+  padding: 0
+  list-style: none
+  margin-bottom: 30px
+
+.system
+  display: flex
+  justify-content: space-around
+  align-items: center
+  min-height: 56px
+
+.download__text
+  margin: 0
+  font-size: 14px
+  line-height: 24px
+  color: #ffffff
+  text-align: center
+  font-family: $dfl
+ 
+.download__slogan
+  display: none
+
+.header__logo
+  display: block
   width: 147px
   height: 40px
-  transform: translateX(-70px) translateY(-5px)
-
-.header-svg__glases
-  display: none
-
-.header-svg__star
-  display: none
-
-.header-svg__logo
-  fill: #ffffff
-  transition: fill 0.3s ease
-
-.header__logo  
-  width: 90px
   &:hover .header-svg__logo,
   &:focus .header-svg__logo
     fill: $accent
   &:active .header-svg__logo
-    fill: rgba(255,255,255,0.3)
-    
+    fill: rgba(255,255,255, 0.3)
 
- 
+.header-svg__logo
+  fill: #fff
+  transform: translateX(-70px) translateY(-10px)
+  transition: fill 0.3s ease
 
+.header-svg__star
+  display: none
 
-.navigation
-  transition: margin-top 1s ease
-  .navigation__top-line
-    padding: 0 20px
-    min-height: 66px
-    display: flex           
-    justify-content: space-between 
-    align-items: center
-    min-height: 66px 
-    background-color: rgba($secondary, 0.7)
-    transition: transform 1s ease
-  .menu
-    display: flex
-    flex-direction: column
-    list-style: none 
-    padding: 0
-    margin: 0  
-    transition: transform 1s ease
-    &__item
-      border-top: 1px solid #485461
-      border-bottom: 1px solid #000
-    .menu__link
-      display: block
-      font-size: 18px
-      line-height: 32px
-      color: #fff
-      text-decoration: none
-      text-transform: uppercase
-      background-color: $secondary
-      text-align: center
-      padding: 10px 20px
-      transition: color 0.3s ease
-      &[href]:focus,
-      &[href]:hover
-        color: $accent
-        text-decoration: none
-      &[href]:active
-        color: rgba($accent, 0.3)
+.header-svg__glases
+  display: none
 
-  .menu-toggle
-    position: relative
-    z-index: 10 
-    &:hover>.menu-toggle__line,
-    &:hover>.menu-toggle__line::before, 
-    &:hover>.menu-toggle__line::after
-      background-color: $accent
-    &:active>.menu-toggle__line,
-    &:active>.menu-toggle__line::before, 
-    &:active>.menu-toggle__line::after
-      background-color: rgba($accent, 0.3)       
-   
- 
-.download
-  margin-top: 180px  
-  background-color: $secondary
-  color: #fff
-  padding: 28px 20px 30px 20px
-  &-btn
-    margin-bottom: 32px
-    outline: none
-  .system
-    display: flex
-    justify-content: space-around
-    align-items: center
-    width: 100%
-    margin: 0
-    padding: 0
-    list-style: none
-    font-size: 0
-    margin-bottom: 31px
-    &__item img
-      display: block
-  &__text
-    padding: 0
-    margin: 0
-    font-size: 14px
-    line-height: 24px
-    font-family: $dfl
-    text-align: center
-
-
-@media (min-width: 320px) and (max-width: 659px) 
-  .contain
-    width: 320px
-    margin: 0 auto
-
-  .download__slogan
-    display: none
 
 @media (min-width: 320px) and (max-width: 1199px)
-  .navigation--opened
-    margin-top: 220px
-    .navigation__top-line
-      background-color: $secondary
-      transform: translateY(-220px)  
-    .menu
-      transform: translateY(-220px) 
-    .menu-toggle
-      width: 24px
-      height: 24px
-      background-color: transparent
-      border: none
-      outline: none
-      padding: 0
-      cursor: pointer
-      &__line
-        display: block
-        width: 24px
-        height: 3px
-        background-color: #fff
-        transform:  rotate(45deg)
-        &::before,
-        &::after
-          content: ''
-          display: block
-          width: 24px
-          height: 3px
-          background-color: #fff
-        &::before
-          transform: rotate(-90deg) 
-        &::after
-          transform: scale(0)
-
-  .navigation--closed
-    margin-top: 0px
-    .navigation__top-line 
-      transform: translateY(0px)
-    .menu
-      transform: translateY(-330px) 
-    .menu-toggle
-      width: 50px
-      height: 24px
-      background-color: transparent
-      border: none
-      outline: none
-      padding: 0
-      cursor: pointer    
-      &__line
-        display: block
-        width: 50px
-        height: 3px
-        background-color: #fff
-        transition: all 0.25s ease
-        transform:  rotate(0deg)
-        &::before,
-        &::after
-          content: ''
-          display: block
-          width: 50px
-          height: 3px
-          background-color: #fff
-          transition: all 0.25s ease
-        &::before
-          transform: translateY(-10px) rotate(0deg) 
-        &::after
-          transform: translateY(7px) scale(1)
-
-@media (min-width: 660px)
-
-  .contain
-    width: 660px
-    margin: 0 auto
-
-  .main-header
-    min-height: 729px 
-    background-image: url("../../img/bg/bg-header-phone-tablet.png"),
-    url("../../img/bg/bg-header-wrist-tablet.png"),
-    url("../../img/bg/bg-header-tablet.png")
-    background-position: 341px 237px, -140px bottom, 0 0
 
 
   .navigation
     .navigation__top-line
-      min-height: 110px 
+      padding: 0 20px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      min-height: 66px
+      background-color: rgba($secondary, 0.7)
+    .menu
+      position: absolute
+      margin: 0
+      padding: 0
+      list-style: none
+      opacity: 1
+      transition: opacity 0.5s ease
+    .menu__link
+      display: block
+      background-color: $secondary
+      color: #ffffff
+      text-transform: uppercase
+      font-size: 18px
+      line-height: 32px
+      text-align: center
+      font-family: $dfb
+      width: 320px //--
+      padding: 17px 20px
+      text-decoration: none
+      transition: color 0.3s ease
+      box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      &[href]:hover,
+      &[href]:focus
+        color: $accent
+      &[href]:active
+        color: rgba($accent, 0.3)
+    .menu-toggle
+      display: none
+      background-color: transparent
+      padding: 0
+      position: relative
+      border: none
+      cursor: pointer
+      outline: none
+      position: relative
+      z-index: 5
+    .menu-toggle__line
+      display: block
+      background-color: #fff
+      transition: background-color 0.3s ease
+      &::before,
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        background-color: #fff
+        transition: background-color 0.3s ease
+
+  .menu-toggle:hover .menu-toggle__line,
+  .menu-toggle:hover .menu-toggle__line::before,
+  .menu-toggle:hover .menu-toggle__line::after
+    background-color: $accent
+
+  .menu-toggle:active .menu-toggle__line,
+  .menu-toggle:active .menu-toggle__line::before,
+  .menu-toggle:active .menu-toggle__line::after
+    background-color: rgba($accent, 0.3)
+    
+
+  .navigation--opened
+    .navigation__top-line
+      background-color: $secondary
+    .menu-toggle
+      display: block
+      width: 24px
+      height: 24px
+    .menu-toggle__line
+      width: 26px
+      height: 3px
+      transform: translateX(-2px) rotate(45deg)
+      &::before
+        width: 26px
+        height: 3px
+        transform: rotate(-90deg) 
+        
+  .navigation--closed 
+    .menu
+      opacity: 0
+      z-index: -10 
+    .menu-toggle
+      display: block
+      width: 50px
+      height: 24px
+    .menu-toggle__line
+      width: 50px
+      height: 3px
+      &::before,
+      &::after
+        width: 50px
+        height: 3px
+      &::before
+        top: 0
+      &::after
+        bottom: 0
+
+@media (min-width: 768px)  
+  .main-header
+    min-height: 730px
+    background-image: url("../../img/bg/bg-header-phone-tablet.png"), url("../../img/bg/bg-header-wrist-tablet.png"), url("../../img/bg/bg-header-tablet.png")
+    background-position: 421px 240px, center bottom, center
+
+  .navigation
+    margin: 0
+    .navigation__top-line
+      padding: 0 40px
+      min-height: 110px
+    .menu__link
+      font-size: 18px
+      line-height: 32px 
+      width: 768px
+
 
   .download
     display: flex
     flex-direction: column
     align-items: center
-    padding: 0 20px
-    margin: 0
-    margin-top: -140px
-    width: 50%
     background-color: transparent
-    &-btn
-      margin-bottom: 47px
-    &__slogan
-      display: block
-      width: 70%
-      font-size: 40px
-      line-height: 50px
-      font-family: $dfl
-      font-weight: 300
-      text-align: center
-      margin-bottom: 34px
+    width: 50%
+    padding: 0 40px
+    margin-top: 103px
+
+  .system
+    width: 210px 
+    justify-content: space-between
+
+  .download__slogan
+    display: block
+    color: #fff
+    font-size: 40px
+    line-height: 40px
+    font-family: $dfl
+    font-weight: 300
+    width: 186px
+    text-align: center
+    margin-bottom: 40px
+
+  .download__text
+    width: 294px
 
   .header-svg__logo
-    transform: translateX(0px) translateY(0px)
+    transform: translate(0px, -10px) 
 
   .header-svg__glases
     display: block
-  .header-svg__star
-    display: none
 
 
-
-
-
-
-@media (min-width: 1200px)
-
-  .contain
-    width: 1200px
-    margin: 0 auto
+@media screen and (min-width: 1200px)
 
   .main-header
     min-height: 853px
     background-image: url("../../img/bg/bg-header-phone-desktop.png"), url("../../img/bg/bg-header-wrist-desktop.png"), url("../../img/bg/bg-header-desktop.png")
-    background-position: 740px 272px, 170px bottom, -650px
-    
+    background-position: 645px 272px, center bottom, center
 
+  
   .navigation
     display: flex
+    justify-content: space-between
     align-items: center
-    justify-content: space-around
-    background-color: rgba($secondary, 0.7)
+    padding: 0 120px
     min-height: 110px
+    background-color: rgba($secondary, 0.7)
     .navigation__top-line
-      min-height: auto
-      padding: 0
-      background-color: transparent
+      display: flex
+      align-items: center
+      .menu-toggle
+        display: none
     .menu
-      flex-direction: row 
-      justify-content: space-around
-      width: 621px
-      &__item
-        border: none
-      .menu__link
-        background-color: transparent
-        padding: 10px 0
-      .menu__link[href]:active
-        color: rgba(255,255,255, 0.3)
-      .menu__link:not([href])
-        border-bottom: 2px solid #fff
-
-
-
-  .menu-toggle
-    display: none
-
-
-  .download
-    margin: 0
-    padding-top: 110px
-    &__slogan
-      width: 231px
-      font-size: 50px
-      line-height: 60px
-    &-btn
-      width: 300px
-      margin-bottom: 67px
-      font-size: 21px
-    .system
-      width: 205px 
-      margin-bottom: 60px 
-    &__text
-      width: 300px 
+      display: flex
+      justify-content: space-between
+      margin: 0
+      padding: 0
+      list-style: none
+      width: 620px
+    .menu__link
+      display: block
+      color: #ffffff
       font-size: 18px
-      line-height: 24px
-      font-family: $dfl
+      font-family: $dfr
+      width: auto
+      padding: 15px 0
+      transition: color 0.3s ease
+      text-decoration: none
+      outline: none
+      &[href]:focus,
+      &[href]:hover
+        color: $accent
+      &[href]:active
+        color: rgba(255,255,255, 0.3)
+      &:not([href])
+        color: #fff
+        border-bottom: 2px solid #fff
+        cursor: pointer
 
 
   .header-svg__star
     display: block
     fill: $accent
-   
+    transition: fill 0.3s ease
+
+  .header__logo:focus .header-svg__star,
+  .header__logo:hover .header-svg__star
+    fill: #fff
+
+  .header__logo:active .header-svg__star
+    fill: rgba(255,255,255, 0.3)
 
 
+  .download
+    width: 370px
+    margin-left: 120px
 
+  .download__slogan
+    font-size: 50px
+    line-height: 55px
+    font-family: $dfl
+    width: 231px
 
-
-
-   
+  .download__text
+    font-size: 18px
+    width: 370px
+    
+    
