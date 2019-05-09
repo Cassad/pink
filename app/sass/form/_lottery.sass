@@ -1,0 +1,368 @@
+.lottery
+  background-color: #fff
+  padding-top: 54px
+  padding-bottom: 24px
+  position: relative
+
+.lottery-text-wrapper
+  padding: 0 20px
+
+.lottery__text
+  font-size: 14px
+  line-height: 30px
+  text-align: center
+  margin: 0
+  color: $secondary
+
+.lottery__request
+  display: none
+
+.form__fieldset
+  background-color: #fff
+  padding-bottom: 41px
+  &--app
+    background-color: #e5e5e5
+  &--achievement
+    background-color: #e5e5e5
+  &--personal
+    padding-top: 41px
+  &--contacts
+    padding-top: 41px
+
+.form__legend
+  background-color: #e5e5e5
+  color: $accent
+  font-size: 14px
+  line-height: 30px
+  text-transform: uppercase
+  text-align: center
+  padding: 41px 41px 0px 41px
+  &--app
+    line-height: 18px
+    margin-bottom: 40px
+  &--achievement
+    line-height: 18px
+    margin-bottom: 40px
+  &--contacts
+    display: none
+  &--emotions
+    background-color: #fff
+    margin-bottom: 20px
+
+.personal-wrapper,
+.contacts-wrapper
+  padding: 0 20px
+  &:not(:last-child)
+    margin-bottom: 21px
+
+label[for="user-name"],
+label[for="user-surname"],
+label[for="user-patronymic"],
+label[for="user-phone"],
+label[for="user-email"]
+  display: block
+  color: $accent
+  font-size: 14px
+  line-height: 30px
+  text-transform: uppercase
+  margin-bottom: 8px
+  padding-left: 43px
+
+
+.input-text
+  font-size: 18px
+  line-height: 30px
+  font-family: $dfr
+  padding: 16px 0 12px 20px
+  border: 2px solid #e5e5e5;
+  width: 100%
+  outline: none
+  transition: border-color 0.3s ease
+  &:hover
+    border-color: $secondary
+  &:focus
+    border-color: $accent
+  &::placeholder
+    color: $secondary
+  
+.input-radio-wrapper,
+.input-check-wrapper,
+  padding: 0 20px
+  &:not(:last-child)
+    margin-bottom: 40px
+
+
+.check-indicator,
+.radio-indicator
+  font-size: 18px
+  line-height: 30px
+  position: relative 
+  cursor: pointer
+  margin: 0
+  &::before
+    content: ''
+    display: inline-block
+    width: 35px
+    height: 35px
+    border: 2px solid #ccc
+    background-color: #fff
+    transition: border-color 0.3s ease
+    vertical-align: middle
+    margin-right: 33px
+  &:focus::before,
+  &:hover::before
+    border-color: $secondary
+
+.radio-indicator::before
+  border-radius: 50%
+
+.input-radio,
+.input-check
+  display: none
+
+.input-radio:checked + .radio-indicator::after
+  content: ''
+  position: absolute
+  display: block
+  width: 15px
+  height: 15px
+  background-color: $accent
+  border-radius: 50%
+  top: calc(50% - 7.5px)
+  left: 10px
+  
+.input-radio:checked + .radio-indicator:active::before,
+.input-radio + .radio-indicator:active:active::before
+  border-color: $accent
+
+  
+
+.input-check:checked + .check-indicator::after
+  content: ''
+  position: absolute
+  display: block
+  border: 2px solid $accent
+  border-top: none
+  border-right: none
+  width: 18px
+  height: 12px
+  transform: rotate(-45deg)
+  top: calc(50% - 10px)
+  left: 8px
+
+.input-check:checked + .check-indicator:active::before,
+.input-check + .check-indicator:active::before
+  border-color: $accent
+
+
+.emotions-textarea
+  width: 280px
+  min-height: 276px
+
+.form__fieldset--emotions
+  padding: 0 20px
+  margin-bottom: 50px
+  
+ 
+.form__button
+  background-color: #2aab6d
+  margin-bottom: 40px
+  &:focus,
+  &:hover
+    background-color: #1c9b5e
+  &:active
+    color: rgba(255,255,255,0.3)
+  
+.form__submit
+  padding: 0 20px
+
+.required-field-wrapper
+  text-align: center
+  line-height: 30px
+  font-size: 14px
+  text-transform: uppercase
+
+.star
+  color: $accent
+
+.input-text--error
+  border: 3px solid red
+
+.input-text--success
+  border: 3px solid green
+
+
+@media screen and (min-width: 768px)
+  .lottery
+    padding-top: 100px
+    padding-bottom: 50px
+
+  .lottery-text-wrapper
+    margin-bottom: 35px
+    padding: 0 120px
+
+  .lottery__text
+    padding: 0
+    font-size: 18px
+    line-height: 30px
+
+  .lottery__request
+    display: block
+    text-align: center
+
+  .personal-wrapper
+    display: flex
+    align-items: center
+    label
+      margin-right: 20px
+      padding: 0
+
+  .form__fieldset
+    background-color: #fff
+    border: 1px solid #ccc
+    margin: 0 20px
+    padding-left: 60px
+    padding-top: 40px
+    margin-bottom: 50px
+    &--app
+      padding-bottom: 56px
+    &--contacts
+      padding-bottom: 30px
+      padding-right: 60px
+    &--achievement
+      padding-bottom: 50px
+    &--personal
+      padding-top: 41px
+      padding-bottom: 20px
+      padding-left: 20px
+      border: none
+    &--emotions
+      padding-bottom: 50px
+      padding-right: 60px
+
+      
+      
+  .form__legend
+    padding: 0
+    margin: 0
+    background-color: #fff
+    &--app
+      line-height: 18px
+      width: 370px
+    &--achievement
+      line-height: 
+      width: 420px
+    &--contacts
+      display: block
+      width: 250px
+    &--emotions
+      background-color: #fff
+      width: 230px
+
+  .emotions-textarea
+    width: 100%
+    padding: 0 20px
+
+  .form__submit
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+  
+  .form__button
+    width: 50%
+    margin-bottom: 0
+
+  .contacts-wrapper
+    display: flex
+    flex-direction: column
+    position: relative
+    padding: 0
+    label
+      order: 1
+      margin-bottom: 0
+    input
+      margin-bottom: 20px
+
+  .input__icon
+    position: absolute
+    display: block
+    width: 58px
+    height: 58px
+    background-color: #e5e5e5
+    right: 2px
+    top: 2px
+    background-position: center
+    background-repeat: no-repeat
+    &--phone
+      background-image: url("../../img/icons/icon_phone_form.png")
+    &--email
+      background-image: url("../../img/icons/icon_email_form.png")
+
+
+@media screen and (min-width: 1200px)
+
+  .lottery-text-wrapper
+    padding: 0 220px
+
+  .lottery__form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    padding: 0 120px
+
+  .form__fieldset
+    margin: 0
+    padding: 0
+    width: 100%
+    margin-bottom: 50px
+    &--personal
+      width: 48%
+      padding-top: 10px
+    &--app
+      width: 48%
+      padding-top: 50px
+    &--contacts
+      padding-top: 25px
+    &--achievement
+      padding: 45px 0
+    &--emotions
+      padding: 35px 60px 45px 60px
+
+  .info-wrapper
+    display: flex
+    justify-content: space-around
+
+  .contacts-wrapper
+    width: 43%
+
+  .achievement-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+
+
+  .input-check-wrapper
+    padding: 0
+    width: 30%
+    &:not(:last-child)
+      margin-bottom: 0
+    &:first-child
+      margin-bottom: 45px
+
+  .form__submit
+    padding: 0
+      
+  
+
+
+
+ 
+      
+
+
+
+  // .input-radio-wrapper,
+  // .input-check-wrapper
+  //   padding-left: 0

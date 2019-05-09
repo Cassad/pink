@@ -1,0 +1,85 @@
+.popup
+  position: fixed
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0,0,0,0.5)
+  transition: transform 1s ease
+  transform: scale(0)
+  top: 0
+
+
+.popup--error 
+  transform: scale(1)
+  .popup__content--error
+    top: 30%
+  .popup__content--success
+    display: none
+
+.popup--success
+  transform: scale(1)
+  .popup__content--error
+    display: none
+  .popup__content--success
+    top: 30%
+
+
+.popup__content
+  padding: 46px 20px 50px 20px
+  background-color: #fff
+  text-align: center
+  width: 320px
+  position: absolute
+  left: calc(50% - 168px)
+  color: $secondary
+
+
+.popup__button
+  margin-bottom: 0
+
+.popup__title
+  font-size: 18px
+  line-height: 24px
+  font-family: $dfb
+  margin-bottom: 25px
+
+.popup__text
+  margin-bottom: 40px
+  font-size: 14px
+
+.popup__button
+  background-color: #2aab6d
+  &:focus,
+  &:hover
+    background-color: #1c9b5e
+  &:active
+    color: rgba(255,255,255,0.3)
+
+@media screen and (min-width: 768px)
+  .popup__title
+    font-size: 30px
+    line-height: 40px
+    margin-bottom: 30px
+
+  .popup__text
+    font-size: 18px
+    margin-bottom: 85px
+
+  .popup__content
+    min-width: 460px
+    left: calc(50% - 238px)
+    padding: 46px 77px 50px 77px
+    
+  .popup__button
+    font-size: 22px
+    line-height: 30px
+
+@media screen and (min-width: 1200px)
+  
+  .popup__content
+   min-width: 780px
+   left: calc(50% - 398px)
+   padding: 50px 215px 50px 215px
+
+  .popup__content--success
+    padding-left: 190px
+    padding-right: 190px

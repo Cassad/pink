@@ -1,4 +1,5 @@
 .main-header
+  position: relative
   min-height: 730px
   background-image: url("../../img/bg/bg-header-phone-mobile.png"), url("../../img/bg/bg-header-wrist-mobile.png"),url("../../img/bg/bg-header-mobile.png")
   background-repeat: no-repeat
@@ -7,11 +8,20 @@
 .download
   padding: 30px 20px
   background-color: $secondary
-  margin-top: 380px
+  // margin-top: 380px
 
 
 .download-btn
   margin-bottom: 30px
+  background-color: transparent
+  border: 3px solid #fff
+  border-radius: 30px
+  &:focus,
+  &:hover
+  	background-color: #fff
+  	color: $accent
+  &:active
+  	color: rgba($accent, 0.3)
 
 
 .download__list
@@ -70,6 +80,7 @@
       align-items: center
       min-height: 66px
       background-color: rgba($secondary, 0.7)
+      margin-bottom: 380px
     .menu
       position: absolute
       margin: 0
@@ -131,6 +142,9 @@
 
   .navigation--opened
     .navigation__top-line
+    .menu
+      position: absolute
+      top: 66px
       background-color: $secondary
     .menu-toggle
       display: block
@@ -147,6 +161,7 @@
         
   .navigation--closed 
     .menu
+      position: absolute
       opacity: 0
       z-index: -10 
     .menu-toggle
@@ -176,10 +191,15 @@
     .navigation__top-line
       padding: 0 40px
       min-height: 110px
+      margin-bottom: 0
+    .menu
+      top: 110px
     .menu__link
       font-size: 18px
       line-height: 32px 
       width: 768px
+
+
 
 
   .download
@@ -300,5 +320,5 @@
     width: 370px
 
 
-    
+
     

@@ -39,13 +39,16 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/bootstrap/js/bootstrap.min.js',
-		'app/js/common.js', // Always at the end
+		'app/js/common.js',// Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
+	.pipe(uglify())
 	// .pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });
+
+
 
 gulp.task('code', function() {
 	return gulp.src('app/*.html')
@@ -82,5 +85,5 @@ if (gulpversion == 4) {
 		gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
 		gulp.watch('app/*.html', gulp.parallel('code'))
 	});
-	gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));
+	gulp.task('default', gulp.parallel('watch', 'styles', 'scripts', 'browser-sync' ));
 }

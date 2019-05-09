@@ -28,7 +28,7 @@
 
 <body class="inner-page">
   <header class="main-header contain">
-    <nav class="navigation navigation--opened navigation--nojs">
+    <nav class="navigation navigation--closed navigation--nojs">
       <div class="navigation__top-line">
         <a href="#" class="header__logo">
           <svg version="1.1" class="header-svg__logo" xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,108 @@
         </li>
       </ul>
     </nav>
+    <div class="main-header__concurs">
+      <p class="main-header__text">
+        Конкурс на самое безбашенное путешествие с Пинк
+      </p>
+    </div>
   </header>
+  <section class="lottery contain">
+    <div class="lottery-text-wrapper">
+      <h2 class="visually-hidden">Конкурс от Pink</h2>
+      <p class="lottery__text">
+        Поделитесь своей историей и получите шанс выиграть 
+        ценный приз — 1000 миль на вашу бонусную карту! 
+      </p>
+      <span class="lottery__request">Пожалуйста, заполните форму ниже:</span>
+    </div>
+    <form action="https://echo.htmlacademy.ru" method="get" class="lottery__form form">
+      <fieldset class="form__fieldset form__fieldset--personal">
+        <div class="personal-wrapper">
+          <label for="user-surname">Фамилия:</label>
+          <input type="text" class="input-text" id="user-surname" name="surname" placeholder="Укажите фамилию *" data-valid="yes">  
+        </div>
+        <div class="personal-wrapper">
+          <label for="user-name">Имя:</label>
+          <input type="text" class="input-text" id="user-name" name="name" placeholder="Введите ваше имя *" data-valid="yes">  
+        </div>
+        <div class="personal-wrapper">
+          <label for="user-patronymic">Отчество:</label>
+          <input type="text" class="input-text" id="user-patronymic" name="patronymic" placeholder="Ну и отчество тоже"> 
+        </div>
+      </fieldset>
+      <fieldset class="form__fieldset form__fieldset--app">
+        <legend class="form__legend form__legend--app">С каким приложением путешествовали?</legend>
+        <div class="input-radio-wrapper">
+          <input type="radio" class="input-radio" id="pink-ios" name="app" checked>
+          <label for="pink-ios" class="radio-indicator">Pink для iOS</label>
+        </div>
+        <div class="input-radio-wrapper">
+          <input type="radio" class="input-radio" id="pink-android" name="app">
+          <label for="pink-android" class="radio-indicator">Pink  для Android</label>
+        </div>
+        <div class="input-radio-wrapper">
+          <input type="radio" class="input-radio" id="pink-windows" name="app">
+          <label for="pink-windows" class="radio-indicator">Windows Phone</label>
+        </div>
+      </fieldset>
+      <fieldset class="form__fieldset form__fieldset--contacts">
+        <legend class="form__legend form__legend--contacts">Контактная информация</legend>
+        <div class="info-wrapper">
+          <div class="contacts-wrapper">
+            <label for="user-phone" >Номер телефона</label>
+            <input type="tel" class="input-text" name="phone"   id="user-phone" placeholder="Номер, пожалуйста">
+            <span class="input__icon input__icon--phone"></span>              
+          </div>
+          <div class="contacts-wrapper">
+            <label for="user-email" >Адрес почты</label>
+            <input type="email" class="input-text" name="email"   id="user-email" placeholder="Введите почту *" data-valid="yes">
+            <span class="input__icon input__icon--email"></span>          
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="form__fieldset form__fieldset--achievement">
+        <legend class="form__legend form__legend--achievement">Ваши безбашенные достижения в путешествии</legend>
+        <div class="achievement-wrapper">
+          <div class="input-check-wrapper">
+            <input type="checkbox" class="input-check" name="shark" id="option-1" checked>
+            <label for="option-1" class="check-indicator">Сделал селфи с акулой</label>
+          </div>
+          <div class="input-check-wrapper">
+            <input type="checkbox" class="input-check" name="beach" id="option-2" checked>
+            <label for="option-2" class="check-indicator">Обгорел на пляже</label>
+          </div>
+          <div class="input-check-wrapper">
+            <input type="checkbox" class="input-check" name="ChackNoris" id="option-3">
+            <label for="option-3" class="check-indicator">Видел Чака Норриса</label>
+          </div>
+          <div class="input-check-wrapper">
+            <input type="checkbox" class="input-check" name="souvenir" id="option-4">
+            <label for="option-4" class="check-indicator">Накупил сувениров</label>
+          </div>
+          <div class="input-check-wrapper">
+            <input type="checkbox" class="input-check" name="tower" id="option-5" checked>
+            <label for="option-5" class="check-indicator">Удержал башню</label>
+          </div>
+          <div class="input-check-wrapper">
+            <input type="checkbox" class="input-check" name="break_hotel" id="option-6">
+            <label for="option-6" class="check-indicator">Разгромил отель</label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="form__fieldset form__fieldset--emotions">
+        <legend class="form__legend form__legend--emotions">Опишите свои эмоции</legend>
+        <textarea name="emotions" id="" cols="30" rows="10" class="emotions-textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+      </fieldset>
+      <div class="form__submit">
+        <button type="submit" class="button form__button">Отправить форму</button>
+        <div class="required-field-wrapper">
+          <span class="star">*</span>
+          <span class="field">&#8212; Обязательные поля</span>
+        </div>
+      </div>
+    </form>
+  </section>
  
   <footer class="main-footer contain">
     <div class="main-footer-wrapper">
@@ -160,8 +261,26 @@
         </svg>
       </a>
     </div>
-
   </footer>
+  <section class="popup">
+    <div class="popup__content popup__content--error">
+      <h3 class="popup__title">Что-то пошло не так!</h3>
+      <p class="popup__text">
+        Проверьте поля, выделенные красным,
+        скорее всего вы забыли их заполнить
+      </p>
+      <button class="button popup__button">ок</button>
+    </div>
+    <div class="popup__content popup__content--success">
+      <h3 class="popup__title">Ваша заявка отправлена</h3>
+      <p class="popup__text">
+        Спасибо за ваше участие, ваша заявка уже поступила к нам.
+        В ближайшее время мы рассмотрим ее и оповестим вас.
+      </p>
+      <button class="button popup__button">Отправить форму</button>
+    </div>
+  </section>
+
 
 
   <script src="js/scripts.min.js"></script>
